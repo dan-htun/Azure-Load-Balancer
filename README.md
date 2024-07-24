@@ -1,5 +1,5 @@
 # Azure-Load-Balancer
-[Imgur](https://i.imgur.com/wPOZXtx.png)
+![Imgur](https://i.imgur.com/wPOZXtx.jpg)
 In this Azure cloud project, we'll create a virtual network with two virtual machines (VMs) hosting web servers. We will set up a basic load balancer to distribute traffic across backend VMs and test its functionality. This involves:
 
 1. **Creating a virtual network with a subnet.**
