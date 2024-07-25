@@ -25,6 +25,8 @@ Configure IP Addresses with a subnet:
 ### Step 2: Creating Virtual Machines
 - **Availability Set**: Create a new availability set with 2 fault and update domains.
 - **Image**: Windows Server 2019 Data Center – x64 Gen2.
+![Imgur](https://imgur.com/nEuhPCa)
+
 - **VM Size**: Choose a size such as Standard B2s.
 - **Inbound Ports**: Allow HTTP (port 80) and RDP (port 3389).
 - **Disk**: Select "Standard SSD".
@@ -32,17 +34,22 @@ Configure IP Addresses with a subnet:
   - Select the virtual network `MyVNET` created in the first step.
   - Choose the subnet `BACKENDPOOL`.
   - Create a new public IP with Basic SKU and Static IP assignment.
+![Imgur](https://imgur.com/QKEG4wH)
 - **Creating the Second VM**:
   - Follow the same steps to create another virtual machine, `VM2`, with similar configurations.
 
 ### Step 3: Installing Web Server (IIS) on VMs
 1. **Connect to VM1 via RDP**:
    - Download and open the RDP file, then connect. Enter the VM1 password.
+![Imgur](https://imgur.com/GETuXNp)
+
 2. **Install Web Server (IIS) on VM1**:
    - Open PowerShell and run the following command:
      ```powershell
      Install-WindowsFeature -name Web-Server -IncludeManagementTools
      ```
+![Imgur](https://imgur.com/LptPIxI)
+
 3. **Create a Default HTML Page on VM1**:
    - Create a simple HTML file named `default.html` with the content "Welcome to VM1."
    - Save the file in `C:\inetpub\wwwroot`.
@@ -58,24 +65,30 @@ Configure IP Addresses with a subnet:
 2. **Configure Frontend IP**:
    - Enter `Myfrontend` for the name.
    - Create a new public IP address with Static IP assignment.
+![Imgur](https://imgur.com/RV8Wzp1)
 3. **Create a Backend Pool**:
    - Type a name and select the virtual network `MyVNET`.
    - Add IP configurations to the backend pool by selecting `VM1` and `VM2`.
+![Imgur](https://imgur.com/Va3AcTr)
 4. **Set Load Balancing Rules**:
    - Add a new rule with:
      - **Frontend IP**: `Myfrontend`.
      - **Backend Pool**: Select the name of the backend pool created in the previous step.
      - **Protocol**: TCP.
      - **Port and Backend Port**: 80.
+![Imgur](https://imgur.com/WEQmLfs)
 5. **Configure Health Probe**:
    - **Protocol**: TCP.
    - **Port**: 80.
    - **Interval**: 5 seconds.
+![Imgur](https://imgur.com/ffBkPm7)
 
 ### Step 5: Testing the Load Balancer
 1. Go to the load balancer's frontend IP configuration to find the public IP.
-2. Open an internet browser and enter `http://<public-ip-address>/default.html`.
-3. Refresh the browser to see alternating responses from `VM1` and `VM2`.
+![Imgur](https://imgur.com/UBEniDp)
+3. Open an internet browser and enter `http://<public-ip-address>/default.html`.
+4. Refresh the browser to see alternating responses from `VM1` and `VM2`.
+![Imgur](https://imgur.com/ffBkPm7)
 
 ### Summary
 A public load balancer in Azure provides numerous advantages, ensuring high availability, scalability, and performance optimization for your applications.
