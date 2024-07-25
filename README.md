@@ -9,7 +9,8 @@
 
 Finally, we'll test to see how the load balancer distributes traffic by accessing the public frontend IP from a web browser.
 
-Check out my YouTube video for detailed steps.
+Check out my YouTube video below for detailed steps.
+
 [![Watch the video](https://img.youtube.com/vi/N-QBBm2R1zg/0.jpg)](https://youtu.be/N-QBBm2R1zg) 
 
 Assuming that you already have Azure access and have created a subscription and a resource group, those details are omitted in the following steps. Usernames, passwords, regions, and resource names can be selected based on your preference.
@@ -18,7 +19,8 @@ Assuming that you already have Azure access and have created a subscription and 
 Configure IP Addresses with a subnet:
 - In the "IP Addresses" tab, enter the address range `10.1.0.0/16`.
 - Delete the default subnet name and create a new subnet `BACKENDPOOL` with the address range of `10.1.0.0/24`.
-- [Imgur](https://imgur.com/iAUqtmB.jpg)
+  
+![Imgur](https://imgur.com/iAUqtmB.jpg)
 
 ### Step 2: Creating Virtual Machines
 - **Availability Set**: Create a new availability set with 2 fault and update domains.
