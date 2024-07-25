@@ -89,7 +89,7 @@ Configure IP Addresses with a subnet:
 ![Imgur](https://imgur.com/UBEniDp.jpg)
 3. Open an internet browser and enter `http://<public-ip-address>/default.html`.
 4. Refresh the browser to see alternating responses from `VM1` and `VM2`.
-![Imgur](https://imgur.com/ffBkPm7.jpg)
+![Imgur](https://i.imgur.com/3YIlUTP.jpg)
 
 ### Summary
 A public load balancer in Azure provides numerous advantages, ensuring high availability, scalability, and performance optimization for your applications.
