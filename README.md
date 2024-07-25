@@ -9,4 +9,4 @@
 
 Finally, we'll test to see how the load balancer distributes traffic by accessing the public frontend IP from a web browser.
 
-[![Watch the video](https://img.youtube.com/vi/N-QBBm2R1zg/maxresdefault.jpg)](https://youtu.be/N-QBBm2R1zg)
+[![Watch the video](https://img.youtube.com/vi/N-QBBm2R1zg/maxresdefault.jpg)](https://youtu.be/N-QBBm2R1zg) 
