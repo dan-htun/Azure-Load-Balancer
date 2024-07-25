@@ -9,7 +9,8 @@
 
 Finally, we'll test to see how the load balancer distributes traffic by accessing the public frontend IP from a web browser.
 
-Check out my YouTube video below for detailed steps.
+Check out my [youTube video](https://www.youtube.com/watch?v=N-QBBm2R1zg) below for detailed steps.
+ <a href="https://www.youtube.com/channel/UCgylnM-5YuliUs6nvLKv2gw/videos" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="network fun" height="30" width="40" /></a>
 
 [![Watch the video](https://img.youtube.com/vi/N-QBBm2R1zg/0.jpg)](https://youtu.be/N-QBBm2R1zg) 
 
